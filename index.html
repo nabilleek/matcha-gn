@@ -4,43 +4,433 @@
 <head>
     <!-- Aquí va información importante pero no esta visible en el sitio-->
     <title> Matcha prueba</title>
+    <!--Para clases se coloca el punto antes-->
     <style>
-        body{
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap&family=Alegreya&family=Slabo+27px&family=Open+Sans:wght@3001&display=swap');
+
+        body {
             background-color: #fffbf7;
+            font-family: "Open Sans", sans-serif;
+            margin: 0;
         }
-        h1{
-            color:#025157;
+
+        .header {
+            margin: 40px 20px 0px 20px;
+            font-size: 0;
+            height: 45px;
+            font-family: sans-serif;
+        }
+
+        .navbar {
+            width: 70%;
+            text-align: center;
+            color: #025157;
+            font-weight: 500;
+        }
+
+        .header>* {
+            display: inline-block;
+            font-size: 16px;
+            vertical-align: middle;
+            height: 100%;
+            line-height: 45%;
+        }
+
+        .logo {
+            width: 15%;
+        }
+
+        .logo img {
+            width: 15%;
+        }
+
+        .menu-item {
+            display: inline;
+            margin-right: 25px;
+            margin-left: 25px;
+        }
+
+        .actions {
+            width: 15%;
+            text-align: right;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .actions>* {
+            margin-right: 10px;
+            margin-left: 10px;
+        }
+
+        .actions a {
+            color: #67b54b;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        img {
+            vertical-align: middle;
+            border-style: none;
+        }
+
+        figure.intro>img {
+            width: 70%;
+        }
+
+        li {
+            display: inline;
+        }
+
+        h1 {
+            color: #025157;
+            text-align: center;
+            font-family: "Alegreya", serif;
+            font-size: 60px;
+            margin-bottom: 24px;
+        }
+
+         h3 {
+            font-size: 25px;
+            line-height: 30px;
+            /*font-family: "Alegreya", serif;*/
+            color: #025157;
+        }
+
+        h4 {
+            color: #46484c;
+            font-family: "Slabo 27px", serif;
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+
+        p {
+            color: #8b8b8b;
+        }
+
+        article {
+            display: block;
+        }
+
+        .publish {
+            width: 50%;
+            justify-content: space-between;
+        }
+
+        .publish h3 {
+            font-family: "Alegreya", serif;
+            font-size: 40px;
+            line-height: 48px;
+            color: #025157;
+        }
+
+        .publish>p {
+            font-size: 16px;
+            color: #343434;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+        .publish>form {
+            display: flex;
+            align-items: center;
+        }
+
+        .publish>form p {
+            color: #025157;
+            margin-right: 18px;
+
+
+        }
+
+        button {
+            color: #fff;
+            background-color: #025157;
+            padding: 15px 20px;
+            margin: 0 10px;
+            border-radius: 5px;
+            border: 0;
+        }
+
+        .secondary {
+            background-color: #67b54b;
+            display: inline-block;
+
+        }
+
+        .heroimage {
+            margin-top: 285px;
             text-align: center;
         }
-        h4{
-            color:#46484c;
+
+        .link-item {
+            text-decoration: none;
+            padding: 8px;
+            color: #025157;
         }
-        p{
-            color:#8b8b8b;
+
+        .promo {
+            display: flex;
+            width: 70%;
+            margin: 100px auto;
+            align-items: center;
+            justify-content: space-between;
         }
-        button{
-            color: #fff;
-            background-color: #025157 ;
+
+        .promo video {
+            width: 100%;
         }
-    
+
+        .form-button {
+            background-color: #025157;
+            border: 1px solid #025157;
+            color: fff;
+            padding: 15px 20px;
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+            border-top-right-radius: 8px;
+            border-bottom-right-radius: 8px;
+            margin-left: -10px;
+        }
+
+        .form-text {
+            border: 1px solid #b6b6b6;
+            padding: 15px 20px;
+            border-top-left-radius: 8px;
+            border-bottom-left-radius: 8px;
+        }
+
+        .explanatory-video {
+            display: flex;
+            flex-direction: column;
+            width: 45%;
+            align-items: center;
+        }
+
+        .explanatory-video img {
+            width: 40%;
+            margin-top: 10px;
+        }
+
+        .fixed-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: #fffbf7;
+            z-index: 1000;
+        }
+
+        .features {
+            background-color: #025157;
+            padding: 5% 10%;
+            display: grid;
+            grid-template: repeat(2, 330px) / repeat(2, 1fr);
+        }
+
+        .features .feature-card {
+            margin: 0 15px 30px 15px;
+            background-color: #fff;
+            border: 1px solid #dadada;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            /*Ocultar lo que sobresalga en el contenedor*/
+        }
+
+        .features .feature-card .feature-content {
+            padding: 20px 30px 40px 40px;
+            flex: 2;
+        }
+
+        .features .feature-card .feature-content>* {
+            margin-bottom: 1rem;
+            margin-top: 0;
+
+        }
+
+        .features .feature-card .feature-content img {
+            width: 50px;
+        }
+
+        .features .feature-card .feature-content h3 {
+            font-size: 24px;
+            color: #343434;
+            font-weight: 400;
+        }
+
+        .features .feature-card .feature-content p {
+            font-size: 16px;
+            color: #7e7e7e;
+            font-weight: 400;
+        }
+
+        .features .feature-card .feature-content a {
+            font-size: 16px;
+            color: #67b54b;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        /* es como el weith de android*/
+        .features .feature-card .feature-image {
+            flex: 1;
+            width: 40%;
+            position: relative;
+            right: -50px;
+            height: 80%;
+        }
+
+        .features .feature-card .feature-image figure,
+        /*afecta a firure y a img*/
+        .features .feature-card .feature-image img {
+            margin-top: 0;
+            height: 100%;
+        }
     </style>
 </head>
+<!--Todos los comentarios deben ser quitados antes de subir la pagina a internet-->
 
 <body>
-    <!--Esto se verá en el navegador web-->
-    <h1>Build your blog. Build your business.</h1>
-    <h4>Instantly publish articles, drive more traffic, grow your email list,
-        and see your blog's impact on sales.</h4>
-    <p>Start publishing today with a <strong>free 7-day trial.</strong></p>
-    <p><strong>No credit card</strong> required.</p>
-    <!-- Uso de formulario simple-->
-    <form>
-        <input type="email" required />
-        <button type="submit">
-            Try it now
-        </button>
-    </form>
-    <img src="https://ignos.blog/wp-content/uploads/2021/04/capterra.png" alt="imagen capterra" />
+    <section class="fixed-header">
+        <header class="header">
+            <a href="#" class="logo"><img src="images/matcha-02.png" alt=""></a>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#" class="link-item">Platform</a></li>
+                    <li><a href="#" class="link-item">Pricing</a></li>
+                    <li><a href="#" class="link-item">Customer</a></li>
+                    <li><a href="#" class="link-item">Resources</a></li>
+                    <li><a href="#" class="link-item">About</a></li>
+                </ul>
+            </nav>
+            <div class="actions">
+                <a href="#">Sing in</a>
+                <button class="secondary">Start free trial</button>
+            </div>
+        </header>
+    </section>
+    <!-- Contenedor de principal -->
+    <section class="heroimage">
+        <h1>Build your blog. Build your business.</h1>
+        <h4>Instantly publish articles, drive more traffic, grow your email list,
+            and see your blog's impact on sales.</h4>
+        <!-- Formulario simple-->
+        <form class="signup-form">
+            <input class="form-text" type="email" required placeholder="Enter email address" />
+            <button type="submit" class="form-button">
+                Try it now
+            </button>
+        </form>
+        <p>Start publishing today with a <strong>free 7-day trial.</strong></p>
+        <p><strong>No credit card</strong> required.</p>
+        <img src="https://ignos.blog/wp-content/uploads/2021/04/capterra.png" alt="imagen capterra">
+    </section>
+    <!-- Contenedor de video -->
+    <section class="promo">
+        <!-- multiple tipo de video -->
+        <article class="explanatory-video">
+            <video controls
+                poster="https://images.pexels.com/photos/1581484/pexels-photo-1581484.jpeg?auto=compress&cs=tinysrgb&w=400">
+                <source type="video/mp4" src="videos/tea.mp4">
+            </video>
+            <img src="https://telegramsender.com/images/telegram-sender.png">
+        </article>
+
+        <article class="publish">
+            <h3>Publish to your blog in minutes, not hours.</h3>
+            <p>
+                Your blog is your most powerful asset to build, engage, and retain a
+                loyal audience. But you don't have hours to create content that may or
+                may not work. With Matcha, instantly publish from our library of
+                10,000+ professionally written articles and build your email list
+                faster with our powerful conversion tool.
+            </p>
+            <form class="signup-form">
+                <p>Start publish today</p>
+                <div>
+                    <input type="text" class="form-text" placeholder="Enter email">
+                    <button class="form-button">Start My Trial</button>
+                </div>
+            </form>
+
+        </article>
+    </section>
+
+    <section class="features">
+        <article class="feature-card">
+            <div class="feature-content">
+                <figure>
+                    <img src="images/Logo 1.png" alt="Publish icon" />
+                </figure>
+                <h3>Fill your blog with engaging articles.</h3>
+                <p>
+                    Publish to your blog in less time than it takes to drink your
+                    morning coffee.
+                </p>
+                <a href="#">Publish instantly →</a>
+            </div>
+            <div class="feature-image">
+                <figure>
+                    <img src="images/Cover.png" alt="Site traffic example" />
+                </figure>
+            </div>
+        </article>
+        <article class="feature-card">
+            <div class="feature-content">
+                <figure>
+                    <img src="images/Logo 2.png" alt="Site traffic icon" />
+                </figure>
+                <h3>Attract and engage more website visitors.</h3>
+                <p>
+                    Enhance your email, social media channels, and paid ads with content
+                    from Matcha.
+                </p>
+                <a href="">Get more site traffic →</a>
+            </div>
+            <div class="feature-image">
+                <figure>
+                    <img src="images/Cover2.png" alt="Site traffic example" />
+                </figure>
+            </div>
+        </article>
+        <article class="feature-card">
+            <div class="feature-content">
+                <figure>
+                    <img src="images/Logo 5.png" alt="Capture icon" />
+                </figure>
+                <h3>Capture more emails with locked content.</h3>
+                <p>
+                    Convert 10x more of your traffic into subscribers and nurture them
+                    to a sale.
+                </p>
+                <a href="">Grow your email list faster →</a>
+            </div>
+            <div class="feature-image">
+                <figure>
+                    <img src="images/Cover3.png" alt="Capture example" />
+                </figure>
+            </div>
+        </article>
+        <article class="feature-card">
+            <div class="feature-content">
+                <figure>
+                    <img src="images/Logo 6.png" alt="ROI icon" />
+                </figure>
+                <h3>Optimize your blog’s performance.</h3>
+                <p>
+                    See what content delivers the most traffic, engagement, email
+                    subscribers, and sales.
+                </p>
+                <a href="">See content’s ROI →</a>
+            </div>
+            <div class="feature-image">
+                <figure>
+                    <img src="images/Project Cover.png" alt="ROI example" />
+                </figure>
+            </div>
+        </article>
+    </section>
 </body>
 
 </html>
